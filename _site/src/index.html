@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "title": "Weswap"
+    })
+  </head>
+  <body>
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+      @@include("partials/sidebar.html", {
+        "category": "dashboards",
+        "subcategory": "",
+        "page": "index.html"
+      })
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "category": "dashboards",
+        "subcategory": "",
+        "page": "index.html"
+      })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content mt--7">
+
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
+
+      <!-- HEADER -->
+      <div class="pt-7 pb-8 bg-ellipses bg-purple-curved">
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+          <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-6 mt-6">
+
+              <!-- Title -->
+              <h1 class="display-2 d-none d-md-block text-center text-white">
+                An instant ERC20 tokens exchange
+              </h1>
+              <h1 class="display-4 d-block d-md-none text-center text-white mt-5">
+                An instant ERC20 tokens exchange
+              </h1>
+
+              <!-- Text -->
+              <p class="lead text-center text-light mt-5 mb-4">
+                Be the first to try our simple interface for swapping cryptocurrencies 👇. Join our Alpha.
+              </p>
+              <form action="https://fund.us17.list-manage.com/subscribe/post?u=9c0647dcb587985ed6121cdf6&amp;id=150e0f091e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate w-75 mx-auto mb-4" target="_blank" novalidate>
+                  <div class="emailer-box form-inline justify-content-center">
+                      <div class="form-group">
+                        <input class="form-control form-control-lg" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="myemail@address.com" required></div>
+                      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9c0647dcb587985ed6121cdf6_150e0f091e" tabindex="-1" value=""></div>
+                      <div class="form-group ml-md--4 d-none d-md-inline-block">
+                          <button class="btn btn-dark btn-lg" name="subscribe" id="mc-embedded-subscribe">
+                              Request Access
+                          </button>
+                      </div>
+                      <div class="form-group d-block d-md-none w-100 mt--3">
+                          <button class="btn btn-dark btn-lg btn-block" name="subscribe" id="mc-embedded-subscribe">
+                              Request Access
+                          </button>
+                      </div>
+                  </div>
+              </form>
+              <img src="assets/img/illustrations/powered-by.svg" class="img-fluid mx-auto d-block mt-4" alt="powered by 0x Project and Kyber">
+            </div>
+          </div> <!-- / .row -->
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row justify-content-center mt--7">
+          <div class="col-11 col-md-9">
+            <div class="row">
+              <div class="col-12 col-lg-4 mb-6">
+                <!-- Card -->
+                <div class="card h-100">
+
+                  <div class="card-body text-center">
+
+                    <div href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
+                      <span class="border border-1 avatar-title bg-white rounded-circle text-success"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg></span>
+                    </div>
+
+                    <h2 class="card-title">
+                      Easy
+                    </h2>
+
+                    <p class="card-text lead text-muted">
+                        Decentralized trading has never been easier. Enter the amount of desired tokens and let the magic happen.
+                    </p>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 mb-6">
+
+                <!-- Card -->
+                <div class="card h-100">
+
+                  <div class="card-body text-center">
+
+                    <div href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
+                      <span class="border border-1 avatar-title bg-white rounded-circle fe fe-zap text-warning"></span>
+                    </div>
+
+                    <h2 class="card-title">
+                      Instant
+                    </h2>
+
+                    <p class="card-text lead text-muted">
+                        Transact assets instantly and at the best price with our efficient multi-protocol approach for our matching engine.
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="col-12 col-lg-4 mb-6">
+
+                <!-- Card -->
+                <div class="card h-100">
+
+                  <div class="card-body text-center">
+
+                    <div href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
+                      <span class="border border-1 avatar-title bg-white rounded-circle fe fe-lock text-primary"></span>
+                    </div>
+
+                    <h2 class="card-title">
+                      Safe
+                    </h2>
+
+                    <p class="card-text lead text-muted">
+                        No custody, settlement or transaction risk.
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-5 mb-5">
+          <div class="col-12 col-md-10">
+            <!-- Title -->
+            <h2 class="display-3 text-center d-none d-md-block">
+              The Most User-Friendly trading experience
+            </h2>
+            <h2 class="display-4 text-center d-block d-md-none">
+              The Most User-Friendly trading experience
+            </h2>
+
+            <!-- Text -->
+            <p class="lead text-center text-muted mx-auto">
+              No order book. Just the essential to exchange seemlessly your Ethers & ERC20 tokens.
+            </p>
+            <img src="assets/img/illustrations/ui-show.png" class="img-fluid d-none d-md-block mt--5" alt="user-interface-weswap">
+            <img src="assets/img/illustrations/ui-show-mobile.png" class="img-fluid d-block d-md-none" alt="mobile-user-interface-weswap">
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt--0 mt-lg--7">
+          <div class="col-11 col-md-9">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-9">
+                <div class="header">
+                  <div class="header-body">
+                    <div class="row align-items-center">
+                      <div class="col-3 d-block d-md-none">
+                        <div class="avatar avatar-lg">
+                        <img src="assets/img/illustrations/ic_security.png" alt="" width="64px">
+                        </div>
+                      </div>
+                      <div class="col-9 col-md-12">
+                        <h6 class="header-pretitle">
+                          Decentralized
+                        </h6>
+                        <h2 class="header-title display-3 d-none d-md-block">
+                          Trustworthy
+                        </h2>
+                        <h2 class="header-title display-4 d-block d-md-none">
+                          Trustworthy
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="lead text-muted">No account. No deposit. No middleman. Trade assets in a truly decentralized fashion and in a totally risk-less manner. No registration is required - you can start trading right away. Your funds and information don’t suffer custodial risk. Never entrust your assets to a centralized exchange again. Weswap lists popular token pairs which you can trade directly from your digital wallet.</p>
+              </div>
+              <div class="d-none d-md-block col-md-3 mt-lg-7">
+                <img src="assets/img/illustrations/ic_security.png" alt="" width="100%">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-11 col-md-9">
+            <div class="row">
+              <div class="d-none d-md-block col-md-3 mt-lg-7">
+                <img src="assets/img/illustrations/ic_liquidity.png" alt="" width="100%">
+              </div>
+              <div class="col-12 col-md-9">
+                <div class="header">
+                  <div class="header-body">
+                    <div class="row align-items-center">
+                      <div class="col-3 d-block d-md-none">
+                        <div class="avatar avatar-lg">
+                        <img src="assets/img/illustrations/ic_liquidity.png" alt="" width="64px">
+                        </div>
+                      </div>
+                      <div class="col-9 col-md-12">
+                        <h6 class="header-pretitle">
+                          Liquid
+                        </h6>
+                        <h2 class="header-title display-3 d-none d-md-block">
+                          Multi-protocol, Guaranteed Liquidity
+                        </h2>
+                        <h2 class="header-title display-4 d-block d-md-none">
+                          Multi-protocol, Guaranteed Liquidity
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="lead text-muted">
+                  We want to provide superior liquidity and user experience in the token economy.
+                  Our multi-protocol model allows for fast transactions via both the 0x shared liquidity network and Kyber Network. Our matching engine finds the best available price and execute the transaction in no time, eliminating front-running. Settlement is done instantly, without any counterparty risk.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-11 col-md-9">
+            <div class="row">
+              <div class="col-12 col-md-9">
+                <div class="header">
+                  <div class="header-body">
+                    <div class="row align-items-center">
+                      <div class="col-3 d-block d-md-none">
+                        <div class="avatar avatar-lg">
+                        <img src="assets/img/illustrations/ic_trading-fee.png" alt="" width="64px">
+                        </div>
+                      </div>
+                      <div class="col-9 col-md-12">
+                        <h6 class="header-pretitle">
+                          Free
+                        </h6>
+                        <h2 class="header-title display-3 d-none d-md-block">
+                          Trading Fees
+                        </h2>
+                        <h2 class="header-title display-4 d-block d-md-none">
+                          Trading Fees
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="lead text-muted">
+                  Other cryptocurrency trading services charge you with withdrawal fees and commissions. Because settlement is done peer-to-peer, directly on the blockchain, you never have to pay fees for withdraws. We have no fees during our beta version, simply pay the gas cost. We will announce when we will introduce trading fees and make sure they are competitive.
+                </p>
+              </div>
+              <div class="d-none d-md-block col-md-3 mt-lg-7">
+                <img src="assets/img/illustrations/ic_trading-fee.png" alt="" width="100%">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-7 mb-5 mb-md-7">
+          <div class="col-11">
+            <!-- Title -->
+            <h2 class="display-3 text-center d-none d-md-block">
+              Meet the team
+            </h2>
+            <h2 class="display-4 text-center d-block d-md-none">
+              Meet the team
+            </h2>
+
+            <!-- Text -->
+            <p class="lead text-center text-muted w-75 mx-auto">
+              Our core team is made of experienced financial experts and engineers. We strive to make people embrace the incoming world token economy with the best technologies and tools possible.
+            </p>
+
+            <div class="mt-7 card-deck">
+                <!-- Card -->
+                <div class="card mb-6 mb-md-3 ">
+                  <div class="card-body text-center">
+                    <span class="avatar avatar-xl card-avatar card-avatar-top">
+                      <img src="assets/img/avatars/profiles/romain.png" class="avatar-img rounded-circle border border-4 border-card" alt="Romain Arandel">
+                    </span>
+                    <h2 class="card-title">
+                      Romain Arandel
+                    </h2>
+                    <small>Co-founder - Content</small>
+                    <p class="card-text text-muted mt-4">
+                      Romain holds an MSc in Finance from the International University of Monaco. He previously worked in M&A arbitrage in the hedge-fund industry, front-office in Private Banking and as a business developer for international companies. Romain also has an entrepreneurial background having co-founded several startups since 2011. He Believes in a decentralized and tokenized economy.
+                    </p>
+                  </div>
+                  <div class="card-footer border border-0 text-center">
+                    <a href="https://www.linkedin.com/in/romainarandel" class="btn btn-white">
+                      <span class="fe fe-linkedin text-primary"></span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div class="card mb-6 mb-md-3">
+                  <div class="card-body text-center">
+                    <span class="avatar avatar-xl card-avatar card-avatar-top">
+                      <img src="assets/img/avatars/profiles/edouard.png" class="avatar-img rounded-circle border border-4 border-card" alt="Edouard Soutzo">
+                    </span>
+                    <h2 class="card-title">
+                      Edouard Soutzo
+                    </h2>
+                    <small>Co-founder - Marketing</small>
+                    <p class="card-text text-muted mt-4">
+                      Edouard is an entrepreneur and a passionate about trading strategies and chart analysis. He spent the last 10 years doing chart trading and entrepreneurship and cofounded startups in Fintech, Medtech and social Media. He is a deep supporter of blockchain technologies and the way it can disintermediate our actual economy.
+                    </p>
+                  </div>
+                  <div class="card-footer border border-0 text-center">
+                    <a href="https://www.linkedin.com/in/edouardsoutzo/" class="btn btn-white">
+                      <span class="fe fe-linkedin text-primary"></span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Card -->
+                <div class="card mb-6 mb-md-3">
+                  <div class="card-body text-center">
+                    <span class="avatar avatar-xl card-avatar card-avatar-top">
+                      <img src="assets/img/avatars/profiles/guillaume.jpg" class="avatar-img rounded-circle border border-4 border-card" alt="Guillaume Palayer">
+                    </span>
+                    <h2 class="card-title">
+                      Guillaume Palayer
+                    </h2>
+                    <small>Co-founder - Product design</small>
+                    <p class="card-text text-muted mt-4">
+                      Guillaume is the co-founder of Weswap. He has also co-founded Betoken. His mission is to design and code the front end experience of the dApp. He is also an user researcher passionate by the token economy and the decentralized Web.
+                    </p>
+                  </div>
+                  <div class="card-footer border border-0 text-center">
+                    <a href="https://www.linkedin.com/in/gpalayer/" class="btn btn-white">
+                      <span class="fe fe-linkedin text-primary"></span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- / .row -->
+      <!-- footer -->
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container} pb-4">
+        <div class="row justify-content-center">
+          <div class="col-11 col-md-10 col-lg-8 col-xl-6">
+
+            <!-- Title -->
+            <h2 class="display-3 text-center d-none d-md-block">
+              Exchange ERC20 tokens using your own Ethereum wallet
+            </h2>
+            <h2 class="display-4 text-center d-block d-md-none">
+              Exchange ERC20 tokens using your own Ethereum wallet.
+            </h2>
+
+            <!-- Text -->
+            <p class="lead text-secondary text-center mt-5">
+              Be the first to try our Alpha and know when we officially launch 👇.
+            </p>
+            <form action="https://fund.us17.list-manage.com/subscribe/post?u=9c0647dcb587985ed6121cdf6&amp;id=150e0f091e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate w-75 mx-auto mb-4" target="_blank" novalidate>
+                <div class="emailer-box justify-content-center">
+                  <input class="form-control form-control-lg" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="myemail@address.com" required>
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7af5c3187ee4d9e4add305a2e_035cb9fb40" tabindex="-1" value=""></div>
+                  <button class="btn btn-dark btn-lg btn-block mt-3" name="subscribe" id="mc-embedded-subscribe">
+                      Request Access
+                  </button>
+                </div>
+            </form>
+            <div class="row justify-content-center">
+              <div class="col-auto mb-5 mt-5">
+                <a href="https://t.me/weswapio" class="btn btn-rounded-circle btn-white mr-3">
+                  <img class="mx-auto" src="assets/img/telegram.svg" alt="telegram logo" height="20">
+                </a>
+                <a href="https://twitter.com/weswap_official" class="btn btn-rounded-circle btn-white mr-3">
+                  <img class="mx-auto" src="assets/img/twitter.svg" alt="twitter logo" height="20">
+                </a>
+                <a href="https://medium.com/weswap" class="btn btn-rounded-circle btn-white mr-3">
+                  <img class="mx-auto" src="assets/img/medium.svg" alt="medium logo" height="20">
+                </a>
+                <a href="https://github.com/weswap" class="btn btn-rounded-circle btn-white">
+                  <img class="mx-auto" src="assets/img/github.svg" alt="medium logo" height="20">
+                </a>
+              </div>
+            </div>
+            <p class="text-center text-secondary">
+              Contact us at <a class="text-secondary" href="mailto:team@weswap.io?subject=Hey">team@weswap.io</a> • Copyright © 2018 Weswap.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

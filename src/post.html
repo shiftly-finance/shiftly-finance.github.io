@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "title": "Weswap"
+    })
+  </head>
+  <body>
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode ) {
+      @@include("partials/sidebar.html", {
+        "category": "pages",
+        "subcategory": "",
+        "page": "feed.html"
+      })
+    }
+    <div class="bg-ellipses bg-purple-curved pb-7">
+      @@if (navPosition == 'topnav' || demoMode) {
+        @@include("partials/topnav.html", {
+          "category": "pages",
+          "subcategory": "",
+          "page": "feed.html"
+        })
+      }
+      <div class="container mt-4 mb-5">
+        <div class="row justify-content-center">
+          <div class="col-11 col-lg-10 col-xl-8">
+            <!-- Title -->
+            <h1 class="display-3 d-none d-md-block text-center text-white">
+              Why using Weswap? — What makes us different from a centralized exchange like ShapeShift!
+            </h1>
+            <h1 class="display-4 d-block d-md-none text-center text-white mt-5">
+              Why using Weswap? — What makes us different from a centralized exchange like ShapeShift!
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
+
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container} mt--7">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+
+            <!-- Card -->
+            <div class="card">
+              <img src="http://blog.weswap.io/wp-content/uploads/2018/07/1_yNGbc5Cqg14mMGcAu81hpQ.jpg" alt="..." class="card-img-top">
+
+              <div class="card-body">
+                <!-- footer -->
+                <div class="mb-3">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <img class="avatar avatar-lg avatar-img rounded-circle border border-1" src="assets/img/avatars/profiles/guillaume.jpg" alt="...">
+                    </div>
+                    <div class="col ml--2">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-1">
+                        Guillaume Palayer
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="card-text small text-muted">
+                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">4hr ago</time>
+                      </p>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+                <hr>
+                <!-- Text -->
+                <p class="lead text-muted">
+                  I've been working on shipping the latest version of Launchday. The story I'm trying to focus on is something like "You're launching soon and need to be 100% focused on your product. Don't lose precious days designing, coding, and testing a product site. Instead, build one in minutes."
+                </p>
+                <!-- Text -->
+                <p class="lead text-muted">
+                  I've been working on shipping the latest version of Launchday. The story I'm trying to focus on is something like "You're launching soon and need to be 100% focused on your product. Don't lose precious days designing, coding, and testing a product site. Instead, build one in minutes."
+                </p>
+                <!-- Text -->
+                <p class="lead text-muted">
+                  I've been working on shipping the latest version of Launchday. The story I'm trying to focus on is something like "You're launching soon and need to be 100% focused on your product. Don't lose precious days designing, coding, and testing a product site. Instead, build one in minutes."
+                </p>
+                <hr>
+                <div class="row justify-content-center">
+                  <div class="col-auto">
+                    <p class="lead text-center">Share on</p>
+                    <a class="btn btn-lg btn-twitter text-white mr-3" href="#">Twitter</a>
+                    <a class="btn btn-lg btn-facebook text-white" href="#">Facebook</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- / .row -->
+      </div>
+      <!-- footer -->
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container} pb-4 mt-6">
+        <div class="row justify-content-center">
+          <div class="col-11 col-md-10 col-lg-8 col-xl-6">
+
+            <!-- Title -->
+            <h2 class="display-3 text-center d-none d-md-block">
+              Exchange ERC20 tokens using your own Ethereum wallet
+            </h2>
+            <h2 class="display-4 text-center d-block d-md-none">
+              Exchange ERC20 tokens using your own Ethereum wallet.
+            </h2>
+
+            <!-- Text -->
+            <p class="lead text-secondary text-center mt-5">
+              Be the first to try our Alpha and know when we officially launch 👇.
+            </p>
+            <form action="https://fund.us17.list-manage.com/subscribe/post?u=9c0647dcb587985ed6121cdf6&amp;id=150e0f091e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate w-75 mx-auto mb-4" target="_blank" novalidate>
+                <div class="emailer-box justify-content-center">
+                  <input class="form-control form-control-lg" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="myemail@address.com" required>
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7af5c3187ee4d9e4add305a2e_035cb9fb40" tabindex="-1" value=""></div>
+                  <button class="btn btn-dark btn-lg btn-block mt-3" name="subscribe" id="mc-embedded-subscribe">
+                      Request Access
+                  </button>
+                </div>
+            </form>
+            <div class="row justify-content-center">
+              <div class="col-auto mb-5 mt-5">
+                <div class="col-auto mb-5 mt-5">
+                  <a href="https://t.me/weswapio" class="btn btn-rounded-circle btn-white mr-3">
+                    <img class="mx-auto" src="assets/img/telegram.svg" alt="telegram logo" height="20">
+                  </a>
+                  <a href="https://twitter.com/weswap_official" class="btn btn-rounded-circle btn-white mr-3">
+                    <img class="mx-auto" src="assets/img/twitter.svg" alt="twitter logo" height="20">
+                  </a>
+                  <a href="https://medium.com/weswap" class="btn btn-rounded-circle btn-white mr-3">
+                    <img class="mx-auto" src="assets/img/medium.svg" alt="medium logo" height="20">
+                  </a>
+                  <a href="https://github.com/weswap" class="btn btn-rounded-circle btn-white">
+                    <img class="mx-auto" src="assets/img/github.svg" alt="medium logo" height="20">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <p class="text-center text-secondary">
+              Contact us at <a class="text-secondary" href="mailto:team@weswap.io?subject=Hey">team@weswap.io</a> • Copyright © 2018 Weswap.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

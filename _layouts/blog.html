@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="{{site.url}}/assets/fonts/feather/feather.min.css">
+    <link rel="stylesheet" href="{{site.url}}/assets/libs/highlight.js/styles/vs2015.css">
+    <link rel="stylesheet" href="{{site.url}}/assets/libs/quill/dist/quill.core.css">
+    <link rel="stylesheet" href="{{site.url}}/assets/libs/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="{{site.url}}/assets/libs/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Theme CSS -->
+
+    <link rel="stylesheet" href="{{site.url}}/assets/css/theme.min.css">
+
+    <meta name="description" content="{{ page.description }}">
+    <title>
+      {% if page.title %}
+        {{ page.title }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </title>
+    <meta name="robots" content="noodp"/>
+    <!-- Canonical URL
+    ================================================== -->
+    <link rel="canonical" href="{% if page.canonical-url %}{{ page.canonical-url }}{% else %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+    <!-- Open Graph: https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content/
+    Twitter: https://dev.twitter.com/docs/cards/types/summary-card
+    ============================== -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ page.title }}"/>
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% endif %}" />
+    <meta property="og:image"  content="{% if page.image %}{{site.url}}{{ page.image }}{% endif %}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="article:published_time" content="{{ page.date }}" />
+    <meta property="article:modified_time" content="{{ page.date }}" />
+    <meta property="og:site_name" content="Shiftly" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@shiftlyfinance" />
+    <meta name="twitter:creator" content="@shiftlyfinance" />
+    <meta name="twitter:title" content="{{ page.title }}" /.>
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% endif %}" />
+    <meta name="twitter:image" content="{% if page.image %}{{site.url}}{{ page.image }}{% endif %}" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131529945-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131529945-1');
+    </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{site.url}}/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{site.url}}/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{site.url}}/assets/img/favicon-16x16.png">
+    <link rel="manifest" href="{{site.url}}/assets/img/site.webmanifest">
+    <link rel="mask-icon" href="{{site.url}}/assets/img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="{{site.url}}/assets/img/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="{{site.url}}/assets/img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+  </head>
+  <body>
+
+    <!-- NAVIGATION
+    ================================================== -->
+    <div class="header alert border-0 alert-dark rounded-0 mb-0 py-3">
+      <div class="container-fluid">
+        <div class="header-body border-0 py-0 text-left">
+          <div class="row align-items-end">
+            <div class="col">
+
+              <h1 class="text-white h3 mb-0 d-none d-md-flex">
+                Weswap is Shiftly now!
+              </h1>
+              <h1 class="text-white h3 mb-0 mb-md-3 d-flex d-md-none">
+                Weswap is Shiftly now!
+              </h1>
+              <small class="text-muted d-none d-md-flex">
+                Weswap has a new home at Shiftly.finance. We're still working hard to deliver the best swaping experience soon.
+              </small>
+
+            </div>
+            <div class="col-auto d-none d-md-flex">
+
+                <a class="btn btn-white" href="#">
+                    <i class="fe fe-read"></i> Medium Post (Soon)
+                </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="bg-ellipses bg-purple-curved pb-7">
+
+        <nav class="navbar navbar-expand-lg bg-transparent border border-0" id="topnav">
+          <div class="container">
+
+            <!-- Brand -->
+            <a class="mr-auto" href="{{site.url}}/">
+              <img src="{{site.url}}/assets/img/shiftly-logo.svg" alt="Shiftly logo" height="48">
+            </a>
+
+            <!-- social -->
+            <div class="navbar-user">
+              <a class="text-white mr-5" href="/blog">Blog</a>
+              <a href="https://t.me/shiftlyfinance" class="btn btn-rounded-circle btn-white mr-3 d-none d-md-inline-block">
+                <img class="mx-auto" src="{{site.url}}/assets/img/telegram.svg" alt="telegram logo" height="20">
+              </a>
+              <a href="https://twitter.com/shiftlyfinance" class="btn btn-rounded-circle btn-white mr-3">
+                <img class="mx-auto" src="{{site.url}}/assets/img/twitter.svg" alt="twitter logo" height="20">
+              </a>
+              <a href="https://medium.com/shiftly" class="btn btn-rounded-circle btn-white d-none d-md-inline-block">
+                <img class="mx-auto" src="{{site.url}}/assets/img/medium.svg" alt="medium logo" height="20">
+              </a>
+            </div>
+
+          </div> <!-- / .container -->
+        </nav>
+
+
+      <div class="container mt-4 mb-6">
+        <div class="row justify-content-center">
+          <div class="col-11 col-lg-10 col-xl-8">
+            <!-- Title -->
+            <h1 class="display-2 d-none d-md-block text-center text-white">
+              Shiftly Blog
+            </h1>
+            <h1 class="display-4 d-block d-md-none text-center text-white mt-5">
+              Shiftly Blog
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+
+
+      <div class="container mt--7">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+
+            {% for post in site.posts %}
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+
+                <!-- Header -->
+                <div class="mb-3">
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <img class="avatar avatar-lg avatar-img rounded-circle border border-1" src="{{site.url}}/assets/img/avatars/profiles/{{post.author-image}}" alt="{{post.author}}">
+                    </div>
+                    <div class="col ml--2">
+
+                      <!-- Title -->
+                      <h4 class="card-title mb-1">
+                        {{ post.author }}
+                      </h4>
+
+                      <!-- Time -->
+                      <p class="card-text small text-muted">
+                        <span class="fe fe-clock"></span> <time datetime="{{post.date}}">{{post.date | date: "%b %d, %y"}}</time>
+                      </p>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+                <a class="text-dark" href="{{ post.url }}"><h2 class="display-4 mt-5">{{ post.title }}</h2></a>
+                <!-- Text -->
+                <div class="lead text-muted">
+                  {{post.excerpt}}
+                  <a class="text-secondary" href="{{ post.url }}">Read More</a>
+                </div>
+                <!-- Image -->
+                <p class="text-center mb-3 mt-5">
+                  <img src="{{site.url}}/assets/img/posts/{{post.image}}" alt="{{post.image}}" class="img-fluid rounded">
+                </p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div> <!-- / .row -->
+      </div>
+      <!-- footer -->
+      <div class="container pb-4 mt-6">
+        <div class="row justify-content-center">
+          <div class="col-11 col-md-10 col-lg-8 col-xl-6">
+
+            <!-- Title -->
+            <h2 class="display-3 text-center d-none d-md-block">
+              Exchange ERC20 tokens using your own Ethereum wallet
+            </h2>
+            <h2 class="display-4 text-center d-block d-md-none">
+              Exchange ERC20 tokens using your own Ethereum wallet.
+            </h2>
+
+            <!-- Text -->
+            <p class="lead text-secondary text-center mt-5">
+              Be the first to try our Alpha and know when we officially launch 👇.
+            </p>
+            <form action="https://weswap.us19.list-manage.com/subscribe/post?u=7af5c3187ee4d9e4add305a2e&amp;id=035cb9fb40" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate col-auto col-md-6 mx-auto mb-4" target="_blank" novalidate>
+              <div class="justify-content-center">
+                <div class="input-group input-group-lg">
+                  <input class="form-control bg-white" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="myemail@address.com" required>
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7af5c3187ee4d9e4add305a2e_035cb9fb40" tabindex="-1" value=""></div>
+                  <div class="input-group-append bg-black">
+                    <button class="btn btn-dark btn-lg btn-block" name="subscribe" id="mc-embedded-subscribe">
+                        <span class="fe fe-send"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="row justify-content-center">
+              <div class="col-auto mb-5 mt-5">
+                <a href="https://t.me/shiftlyfinance" class="btn btn-rounded-circle btn-white mr-3">
+                  <img class="mx-auto" src="{{site.url}}/assets/img/telegram.svg" alt="telegram logo" height="20">
+                </a>
+                <a href="https://twitter.com/shiftlyfinance" class="btn btn-rounded-circle btn-white mr-3">
+                  <img class="mx-auto" src="{{site.url}}/assets/img/twitter.svg" alt="twitter logo" height="20">
+                </a>
+                <a href="https://medium.com/shiftly" class="btn btn-rounded-circle btn-white mr-3">
+                  <img class="mx-auto" src="{{site.url}}/assets/img/medium.svg" alt="medium logo" height="20">
+                </a>
+                <!-- github
+                <a href="https://github.com/weswapexchange" class="btn btn-rounded-circle btn-white">
+                  <img class="mx-auto" src="{{site.url}}/assets/img/github.svg" alt="medium logo" height="20">
+                </a>
+                -->
+              </div>
+            </div>
+            <p class="text-center text-secondary">
+              Contact us at <a class="text-secondary" href="mailto:hello@shiftly.finance?subject=Hey">hello@shiftly.finance</a>
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="{{site.url}}/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="{{site.url}}/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{site.url}}/assets/libs/chart.js/dist/Chart.min.js"></script>
+    <script src="{{site.url}}/assets/libs/chart.js/Chart.extension.min.js"></script>
+    <script src="{{site.url}}/assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="{{site.url}}/assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="{{site.url}}/assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="{{site.url}}/assets/libs/list.js/dist/list.min.js"></script>
+    <script src="{{site.url}}/assets/libs/quill/dist/quill.min.js"></script>
+    <script src="{{site.url}}/assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="{{site.url}}/assets/libs/select2/dist/js/select2.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="{{site.url}}/assets/js/theme.min.js"></script>
+
+  </body>
+</html>
